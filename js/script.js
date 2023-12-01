@@ -43,12 +43,14 @@ setTimeout(function(){
         if(list_user_number.includes(list_random_number[i])){
 
             common_numbers.push(list_random_number[i])
+
         }
-        console.log(common_numbers)
         
         
     }
-
+    
+    console.log(common_numbers)
+    console.log(common_numbers.length)
 }, 4000)
 
 
