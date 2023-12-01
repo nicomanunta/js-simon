@@ -9,7 +9,7 @@ function generateRandomArray(){
     for(let i = 0; i<5; i++){
         list_random_number.push(randomNumber())
     }
-    
+
     let text = list_random_number.join(" ")
     document.getElementById("number").innerText += text
     
@@ -25,6 +25,7 @@ setTimeout(function(){
 
 
 let list_user_number = []
+let common_numbers = []
 setTimeout(function(){
     let numero_1 = parseInt(prompt("Inserisci il primo numero"))
     let numero_2 = parseInt(prompt("Inserisci il secondo numero"))
@@ -39,13 +40,14 @@ setTimeout(function(){
 
     for(let i = 0; i<list_random_number.length; i++){
         
-        for(let i = 0; i<list_user_number.length; i++){
-            
-            if(list_random_number[i] == list_user_number[i]){
-                console.log("Tutti uguali")
-            }
+        if(list_user_number.includes(list_random_number[i])){
+
+            common_numbers.push(list_random_number[i])
         }
-        }
+        console.log(common_numbers)
+        
+        
+    }
 
 }, 4000)
 
