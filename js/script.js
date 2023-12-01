@@ -4,13 +4,14 @@ function randomNumber(){
 }
 
 let list_random_number = []
+
 function generateRandomArray(){
-    
     for(let i = 0; i<5; i++){
         list_random_number.push(randomNumber())
     }
     
-    document.getElementById("number").innerText += list_random_number
+    let text = list_random_number.join(" ")
+    document.getElementById("number").innerText += text
     
     return list_random_number
 }
@@ -30,16 +31,22 @@ setTimeout(function(){
     let numero_3 = parseInt(prompt("Inserisci il terzo numero"))
     let numero_4 = parseInt(prompt("Inserisci il quarto numero"))
     let numero_5 = parseInt(prompt("Inserisci il quinto numero"))
-    
+    // GENERATED: 10, 4, 6, 8, 2
+    // USER 2, 5, 7, 8, 10
     list_user_number.push(numero_1, numero_2, numero_3, numero_4, numero_5)
     console.log(list_user_number)
     console.log(list_random_number)
-    if(list_user_number = list_random_number){
-        console.log("Hai fatto 5 su 5:" +" "+list_random_number)
-    }
-    else{
-        console.log("sono diversi")
-    }
+
+    for(let i = 0; i<list_random_number.length; i++){
+        
+        for(let i = 0; i<list_user_number.length; i++){
+            
+            if(list_random_number[i] == list_user_number[i]){
+                console.log("Tutti uguali")
+            }
+        }
+        }
+
 }, 4000)
 
 
