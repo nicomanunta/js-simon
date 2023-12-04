@@ -21,7 +21,7 @@ console.log(generateRandomArray())
 setTimeout(function(){
     document.getElementById("number").style.display = "none"
     
-}, 3000)
+}, 30000)
 
 
 let list_user_number = []
@@ -32,11 +32,11 @@ setTimeout(function(){
     let numero_3 = parseInt(prompt("Inserisci il terzo numero"))
     let numero_4 = parseInt(prompt("Inserisci il quarto numero"))
     let numero_5 = parseInt(prompt("Inserisci il quinto numero"))
-    // GENERATED: 10, 4, 6, 8, 2
-    // USER 2, 5, 7, 8, 10
+
+   
     list_user_number.push(numero_1, numero_2, numero_3, numero_4, numero_5)
     console.log(list_user_number)
-    console.log(list_random_number)
+    
 
     for(let i = 0; i<list_random_number.length; i++){
         
@@ -48,10 +48,9 @@ setTimeout(function(){
         
         
     }
-    
     console.log(common_numbers)
     console.log(common_numbers.length)
-}, 4000)
+}, 31000)
 
 
 
